@@ -1,0 +1,392 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  color: var(--dark);
+  line-height: 1.4;
+}
+
+
+:root {
+  /* colors */
+  --white: #fff;
+  --blue: #1B9CFC;
+  --red: #FF3F34;
+  --alt-red: rgba(255, 63, 52, 15%);
+  --dark: #1E272E;
+  --gray: rgb(218, 218, 218);
+  --light: rgb(246, 246, 246);
+
+/* font size */
+  --f-xxlarge: 48px;
+  --f-xlarge: 28px;
+  --f-large: 22px;
+  --f-base: 18px;
+  --f-small: 16px;
+
+/* borders */
+  --border-size: 16px;
+  --border-complete: 50%;
+  --border: 1.5px
+}
+
+.feather {
+  width: 24px;
+  height: 24px;
+  stroke: var(--red);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.feather-search {
+  width: 32px;
+  height: 32px;
+}
+
+.feather-github, .feather-linkedin, .feather-twitter {
+  stroke: var(--dark);
+}
+
+.feather-chevron-right {
+  stroke: rgb(167, 167, 167);
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.float-nav {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.navigation {
+  border: solid var(--border) var(--red);
+  border-radius: var(--border-complete);
+  height: 74px;
+  width: 74px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  z-index: 99;
+  background: var(--white);
+}
+
+.navigation-items {
+  list-style: none;
+  transform: translateY(200%);
+  transition: transform .3s ease-in-out;
+}
+
+.float-nav:hover .navigation-items {
+  transform: translateY(0);
+}
+
+.nav-item {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+
+.nav-item__link {
+  border: solid var(--border) var(--red);
+  border-radius: var(--border-complete);
+  height: 38px;
+  width: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s ease-in-out;
+}
+
+.nav-item__link:hover {
+  width: 138px;
+  border-radius: 19px;
+}
+
+.nav-item__link:hover .link-text {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.nav-item__link:hover .icon {
+  transform: scale(0.11111111);
+}
+
+.link-text {
+  position: absolute;
+  color: red;
+  font-size: var(--f-base);
+  transform: scale(0.11111111);
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
+
+.icon {
+  transition: transform .3s ease-in-out;
+}
+
+.red-hover {
+  transition: all .3s ease-in-out;
+  transition-property: background, width, border-radius;
+  background: var(--white);
+}
+
+.red-hover:hover {
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 120px 12px;
+  width: 100%;
+}
+
+.title {
+  font-size: var(--f-xxlarge);
+  max-width: 250px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.subtitle {
+  font-weight: 600;
+  color: var(--red);
+  font-size: var(--f-xlarge);
+  margin-bottom: 34px;
+  text-align: center;
+
+}
+
+.text-center {
+  text-align: center;
+}
+
+.description {
+  margin-bottom: 43px;
+  max-width: 350px;
+  font-size: var(--f-base);
+}
+
+.social-icons {
+  margin-bottom: 27px;
+  list-style: none;
+  display: flex;
+  width: 180px;
+  justify-content: space-evenly;
+}
+
+.social-link {
+  background: var(--white);
+  display: flex;
+  height: 42px;
+  width: 42px;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-complete);
+  transition: background .3s ease-in-out;
+}
+
+.twitter:hover {
+  background: rgba(29, 161, 242, 30%)
+}
+
+.twitter:hover .feather-twitter {
+  stroke: #1DA1F2;
+}
+.linkedin:hover {
+  background: #bbcfe2;
+}
+
+.linkedin:hover .feather-linkedin {
+  stroke: #0e76a8;
+}
+
+.github:hover {
+  background: rgb(129, 129, 129);
+}
+
+.github:hover .feather-github {
+  stroke: var(--white);
+}
+
+.btn {
+  text-decoration: none;
+  color: var(--red);
+  display: flex;
+  height: 48px;
+  padding: 0px 36px;
+  align-items: center;
+  border-radius: 24px;
+  border: solid var(--border) var(--red);
+  transition: background .3s ease-in-out;
+}
+
+.btn:hover {
+  background: var(--alt-red);
+}
+
+.section {
+  background: var(--light);
+  height: 100vh;
+  padding: 12px;
+}
+
+.card {
+  width: 100%;
+  height: 240px;
+  border: solid var(--border) var(--gray);
+  border-radius: var(--border-size);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.card-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -10;
+}
+
+.card:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 10%);
+}
+
+.card:hover .card-description{
+  top: 0
+}
+
+.card-description {
+  z-index: 999;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  transition: top .3s ease-in-out;
+  top: 100%
+}
+
+.card-content {
+  padding: 25px;
+  padding-top: 40px;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: var(--f-large);
+  color: var(--red);
+  line-height: 24px;
+}
+
+.card-subtitle {
+  font-weight: 600;
+  font-size: var(--f-small);
+  margin-bottom: 5px;
+  line-height: 24px;
+}
+
+.card-text {
+  font-size: var(--f-small);
+}
+
+.card-extra {
+  border-top: .5px solid var(--gray);
+  background: rgb(250, 250, 250);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card-extra__link {
+  color: rgb(167, 167, 167);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.card-extra__link:hover {
+  color: var(--red)
+}
+
+.card-extra__link:hover .feather-chevron-right{
+  stroke: var(--red)
+}
+
+.message {
+  margin-top: 60px;
+}
+
+.message > h2 {
+  font-size: 32px;
+  color: rgb(170, 170, 170)
+}
+
+.message > p { color: #ccc}
+
+@media screen and (min-width: 720px) {
+  
+  .main {
+    flex-direction: row;
+  }
+
+  .header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    padding-top: 60px;
+    padding-bottom: 0px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 10%);
+    max-width: 360px;
+  }
+
+  .section {
+    margin-left: 360px;
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .float-nav {
+    bottom: 44px;
+    right: 44px;
+  }
+  .header {
+    max-width: 460px;
+    padding-top: 40px;
+  }
+  .section {
+    margin-left: 460px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 24px 62px;
+    justify-content: space-between;
+  }
+  .card {
+    width: 360px;
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "header": {
+    "title": "Santiago Guerra",
+    "subtitle": "Full-stack Developer",
+    "introduction": "Lorem ipsum",
+    "social": {
+      "github": "https://github.com/SantiagoGuerra",
+      "linkedin": "https://www.linkedin.com/in/santiago--guerra/",
+      "twitter": "https://twitter.com/dedalo_g",
+      "email": "mailto:guerrasantiago19@gmail.com"
+    }
+  }
+}
